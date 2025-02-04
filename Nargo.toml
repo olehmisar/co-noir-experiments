@@ -4,3 +4,4 @@ type = "bin"
 authors = [""]
 
 [dependencies]
+nodash = { git = "https://github.com/olehmisar/nodash/", tag = "v0.39.6" }

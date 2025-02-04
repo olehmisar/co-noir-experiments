@@ -1,4 +1,5 @@
-fn main(a: Field, b: Field) -> pub Field {
-    let input = [a, b];
-    std::hash::poseidon2::Poseidon2::hash(input, input.len())
+global N: u32 = 10;
+
+fn main(a: [Field; N], b: [Field; N]) -> pub Field {
+    nodash::poseidon2(a.concat(b))
 }
