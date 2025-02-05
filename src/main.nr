@@ -1,4 +1,5 @@
 fn main(a: Field, b: Field) -> pub Field {
-    let input = [a, b];
-    std::hash::poseidon2::Poseidon2::hash(input, input.len())
+    // 64, 128, 250, 252 work fine. Only fails for 253
+    a.assert_max_bit_size::<253>();
+    a + b
 }
