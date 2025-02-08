@@ -1,4 +1,4 @@
-fn main(a: Field, b: Field) -> pub Field {
-    let input = [a, b];
-    std::hash::poseidon2::Poseidon2::hash(input, input.len())
+// change type to Field and proving key will be generated in less than a second
+fn main(a: u32)  {
+    assert(a != 0);
 }
